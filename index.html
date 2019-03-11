@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trivial Trivia</title>
+
+    <!-- Reset CSS -->
+    <!--<script src="assets/css/reset.css" crossorigin="anonymous"></script>-->
+
+
+    <style>
+        body {
+            background-image: url('assets/images/space5.gif');
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="trivialTriviaDiv">
+        <div class="container" style="padding-top:30px; padding-bottom:30px;">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="jumbotron" style="background-color:bisque; text-align: center; width: 80%; color:blue">
+                        <h1 style="padding-bottom: 40px; font-size: 40px">Totally Trivial Trivia!</h1>
+                        <hr>
+                        <h1 style="font-size: 20px; color:black">The Andromeda and Milky Way galaxies will collide in approximately how many years:</h1>
+                        <div class="form-group" style="text-align: center; color: black">
+                            <label class="radio-inline">
+                                <input type="radio" name="collide" id="Radios1" value="10 million"/>10 million
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="collide" id="Radios2" value="2.9 Billion"/>2.9 Billion
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="collide" id="Radios3" value="3.75 billion"/>3.75 billion
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="collide" id="Radios4" value="Never"/>Never
+                            </label>
+                        </div>
+                        <hr>
+                        <h1 style="font-size: 20px; color:black">How big is the star, Betelgeuse, in relation to our sun?</h1>
+                        <div class="form-group" style="text-align: center; color: black">
+                            <label class="radio-inline">
+                                <input type="radio" name="betelsize" id="Radios1" value="Same"/>Same
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="betelsize" id="Radios2" value="Venus"/>Orbit of Venus
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="betelsize" id="Radios3" value="Mars"/>Orbit of Mars
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="betelsize" id="Radios4" value="Jupiter"/>Beyond the orbit of Jupiter
+                            </label>
+                        </div>
+                        <hr>
+                        <h1 style="font-size: 20px; color:black">Which is the brightest star in the sky visible from Earth?</h1>
+                        <div class="form-group" style="text-align: center; color: black">
+                            <label class="radio-inline">
+                                <input type="radio" name="bright" id="Radios1" value="Betelgeuse"/>Betelgeuse
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="bright" id="Radios2" value="Venus"/>Venus
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="bright" id="Radios3" value="Sirius"/>Sirius
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="bright" id="Radios4" value="Polaris"/>Polaris
+                            </label>
+                        </div>
+                        <h1 style="font-size: 20px; color:black">What stellar object is known as, The Evening Star?</h1>
+                        <div class="form-group" style="text-align: center; color: black">
+                            <label class="radio-inline">
+                                <input type="radio" name="evening" id="Radios1" value="Venus"/>Venus
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="evening" id="Radios2" value="Polaris"/>Polaris
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="evening" id="Radios3" value="Pollux"/>Pollux
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="evening" id="Radios4" value="Rigel"/>Rigel
+                            </label>
+                        </div>
+                        <h1 style="font-size: 20px; color:black">What type of galaxy is most common in the universe?</h1>
+                        <div class="form-group" style="text-align: center; color: black">
+                            <label class="radio-inline">
+                                <input type="radio" name="galaxy" id="Radios1" value="Spiral"/>Spiral
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="galaxy" id="Radios2" value="Elliptical"/>Elliptical
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="galaxy" id="Radios3" value="Irregular"/>Irregular
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="galaxy" id="Radios4" value="Conical"/>Conical
+                            </label>
+                        </div>
+                         <h1 style="font-size: 20px; color:black">What is the most common type of star found in the Milky Way galaxy?</h1>
+                        <div class="form-group" style="text-align: center; color: black">
+                            <label class="radio-inline">
+                                <input type="radio" name="common" id="Radios1" value="Neutron"/>Neutron
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="common" id="Radios2" value="White Dwarf"/>White Dwarf
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="common" id="Radios3" value="Red Dwarf"/>Red Dwarf
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="common" id="Radios4" value="Supergiant"/>Supergiant
+                            </label>
+                        </div>
+                        <h1 style="font-size: 20px; color:black">How many moons have humans officially discovered to be orbiting planets in our solar system?</h1>
+                        <div class="form-group" style="text-align: center; color: black">
+                            <label class="radio-inline">
+                                <input type="radio" name="moons" id="Radios1" value="9"/>9
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="moons" id="Radios2" value="181"/>181
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="moons" id="Radios3" value="34"/>34
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="moons" id="Radios4" value="59"/>59
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+    
+      <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</body>
+</html>
