@@ -16,7 +16,7 @@ window.onload=function() {
     $("#timerDisplay").hide();
 }
 
-var nTestTime = 30;  // Allow 90 seconds..
+var nTestTime = 90;  // Allow 90 seconds..
 var testTimeout;
 var intervalId;
 
