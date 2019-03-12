@@ -1,0 +1,13 @@
+#timerDisplay {
+    font-family: monospace;
+    font-size: 12px;
+    color: green;
+    position: fixed;
+  
+    /* Typography */
+    text-align: center;
+  
+    /* Visual */
+    background: black;
+  }
+  

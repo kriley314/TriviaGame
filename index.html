@@ -19,6 +19,7 @@
 <body>
     
     <div id="trivialTriviaDiv">
+        <div id="timerDisplay">00:00</div>
         <div class="container" style="padding-top:30px; padding-bottom:30px;">
             <div class="row">
                 <div class="col-md-12">
@@ -160,9 +161,9 @@
                        </div>
                         <div class=theScore>
                             <h1 style="font-size: 20px; color:black; padding-bottom: 20px">All Done!</h1>
-                            <div id=correctAnswers; style="font-size: 14px; color:black">Correct Answers: </div>
-                            <div id=wrongAnswers; style="font-size: 14px; color:black">Wrong Answers: </div>
-                            <div id=unAnswered; style="font-size: 14px; color:black">Unanswered: </div>
+                            <div id=correctAnswers; style="font-size: 14px; color:black">Correct Answers: <span id="numRight">0</span></div>
+                            <div id=wrongAnswers; style="font-size: 14px; color:black">Wrong Answers: <span id="numWrong">0</span></div>
+                            <div id=unAnswered; style="font-size: 14px; color:black">Unanswered: <span id="numUnAnswered">0</span></div>
                         </div>
                         <button class="btn" id="btn-start"><h1>Start Test</h1></button>
                         <button class="btn" id="btn-stop"><h1>Done</h1></button>
