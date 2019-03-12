@@ -19,3 +19,9 @@ score.  All Done!!  # correct answers..  # wrong answers..  # of unanswered ques
 A future enhancement to the implementation of this game will be to have the questions
 table driven which will make it much easier to add/subtract/modify questions!!
 
+Side note..  Part of this assignment mentioned adding a reference from our portfolio
+project to this ..  SO..  I used a new version of my portfolio that I liked better
+than the one I turned in.. The change there was to update the images from the portfolio
+page to show images of the Crystal Game and this Trivia Game and also add links to the
+images to open the sites in separate tabs.
+
