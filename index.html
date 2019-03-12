@@ -133,12 +133,36 @@
                                     <input type="radio" name="moons" id="Radios4" value="fiftynine"/>59
                                 </label>
                             </div>
-                        </div>
+                            <h1 style="font-size: 20px; color:black">Which is the densest planet in our solar system?</h1>
+                            <div class="form-group" id="dense" style="text-align: center; color: black">
+                                <label class="radio-inline">
+                                    <input type="radio" name="dense" id="Radios1" value="earth"/>Earth
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="dense" id="Radios2" value="mercury"/>Mercury
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="dense" id="Radios3" value="mars"/>Mars
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="dense" id="Radios4" value="venus"/>Venus
+                                </label>
+                            </div>
+                            <h1 style="font-size: 20px; color:black">The largest moon in our solar system, Jupiter's Ganymede, is larger than the planet, Mercury?</h1>
+                            <div class="form-group" id="jupGany" style="text-align: center; color: black">
+                                <label class="radio-inline">
+                                    <input type="radio" name="jupGany" id="Radios1" value="true"/>True
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="jupGany" id="Radios2" value="false"/>False
+                                </label>
+                            </div>
+                       </div>
                         <div class=theScore>
                             <h1 style="font-size: 20px; color:black; padding-bottom: 20px">All Done!</h1>
-                            <p id=correctAnswers; style="font-size: 14px; color:black">Correct Answers: </p>
-                            <p id=wrongAnswers; style="font-size: 14px; color:black">Wrong Answers: </p>
-                            <p id=unAnswered; style="font-size: 14px; color:black">Unanswered: </p>
+                            <div id=correctAnswers; style="font-size: 14px; color:black">Correct Answers: </div>
+                            <div id=wrongAnswers; style="font-size: 14px; color:black">Wrong Answers: </div>
+                            <div id=unAnswered; style="font-size: 14px; color:black">Unanswered: </div>
                         </div>
                         <button class="btn" id="btn-start"><h1>Start Test</h1></button>
                         <button class="btn" id="btn-stop"><h1>Done</h1></button>

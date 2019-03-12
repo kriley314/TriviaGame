@@ -164,10 +164,44 @@ function endTest() {
       nWrong++;
     }
 
+    debugger;
+    radios = document.getElementsByName( "dense" );
+    for (var i = 0; i < radios.length; i++){
+      if ( radios[i].checked ) {
+        strTheirAnswer = radios[ i ].value;
+        break;
+      }
+    }
+    if ( i >= radios.length ) {
+      nUnanswered++;
+    } else if ( strTheirAnswer === "earth" ) {
+      nRight++;
+    } else {
+      nWrong++;
+    }
+
+    radios = document.getElementsByName( "jupGany" );
+    for (var i = 0; i < radios.length; i++){
+      if ( radios[i].checked ) {
+        strTheirAnswer = radios[ i ].value;
+        break;
+      }
+    }
+    if ( i >= radios.length ) {
+      nUnanswered++;
+    } else if ( strTheirAnswer === "true" ) {
+      nRight++;
+    } else {
+      nWrong++;
+    }
+
     // Now we have the stats..  Update the screen already!!
-    $("#correctAnswers").text( "Correct Answers: " + nRight );
+    debugger;
+    $("correctAnswers").text( "Correct Answers: " + nRight );
     $("#wrongAnswers").text( "Wrong Answers: " + nWrong );
-    $("#unAnswered").text( "Unanswered: " + nUnanswered );
+    $("#unAnswered").value( "Unanswered: " + nUnanswered );
+
+    $(".theScore").show();
 }
 
 

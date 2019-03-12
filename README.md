@@ -18,3 +18,6 @@ The game will end either when the timer expires or the user selects the "Done" b
 Upon completion of the game, the user will see a screen showing a message and their
 score.  All Done!!  # correct answers..  # wrong answers..  # of unanswered questions..
 
+A future enhancement to the implementation of this game will be to have the questions
+table driven which will make it much easier to add/subtract/modify questions!!
+
