@@ -9,38 +9,165 @@
 // Function to update the html to show the begin test button..
 //
 
-function displayStartTestButton() {
-    $("#theTest").html("<input type='button' class='btn btn-info btn-start' value='Start' style='width:160px; font-size:32px'>");
+window.onload=function() {
+    $(".theQuestions").hide();
+    $(".theScore").hide();
+    $("#btn-stop").hide();
 }
 
-function displayStopTestButton() {
-    debugger;
-    $("#theTest").append("<input type='button' class='btn btn-info btn-stop' value='Stop' style='width:160px; font-size:32px'>");
+var testTimeout;
+
+$("#btn-start").on("click", function() {
+    // Call the function that displays the test questions..
+    $(".theQuestions").show();
+
+    // Hide the start button and show the stop button..
+    $("#btn-start").hide();
+    $("#btn-stop").show();
+
+    // Start the game timer..  45 seconds should be pleny of time..
+    testTimeout = setTimeout( timeUp, 1000 * 45 );
+});
+
+function timeUp() {
+    // in the element with an id of time-left add an h2 saying Time's Up!
+    // console log done
+    console.log("Time ran out");
+    endTest();
 }
+  
+  
+$("#btn-stop").on("click", function() {
+    // Stop the timer..
+    clearTimeout( testTimeout );
 
-function displayTheTest() {
-    debugger;
+    // Call end of test method to calculate score and so on..
+    endTest();
+});
 
-    for ( var i = 0; i < arrTheTestItself.length; i++ ) {
-        $("theTest").append( "<br><hr>" + arrTheTestItself[ i ] );
+function endTest() {
+    // Hide the test itself..  Hide the stop button..
+    $(".theQuestions").hide();  
+    $("#btn-stop").hide();
+
+    // Show the graded test score div..
+    $(".theScore").show();
+
+    // Calculate the scores..
+    var nRight = 0;
+    var nWrong = 0;
+    var nUnanswered = 0;
+    
+    var strTheirAnswer;
+    var radios = document.getElementsByName( "collide" );
+    for (var i = 0; i < radios.length; i++){
+      if ( radios[i].checked ) {
+        strTheirAnswer = radios[ i ].value;
+        break;
+      }
+    }
+    if ( i >= radios.length ) {
+      nUnanswered++;
+    } else if ( strTheirAnswer === "billions" ) {
+      nRight++;
+    } else {
+      nWrong++;
     }
 
-    displayStopTestButton();
+    radios = document.getElementsByName( "betelsize" );
+    for (var i = 0; i < radios.length; i++){
+      if ( radios[i].checked ) {
+        strTheirAnswer = radios[ i ].value;
+        break;
+      }
+    }
+    if ( i >= radios.length ) {
+      nUnanswered++;
+    } else if ( strTheirAnswer === "jupiter" ) {
+      nRight++;
+    } else {
+      nWrong++;
+    }
+
+    radios = document.getElementsByName( "bright" );
+    for (var i = 0; i < radios.length; i++){
+      if ( radios[i].checked ) {
+        strTheirAnswer = radios[ i ].value;
+        break;
+      }
+    }
+    if ( i >= radios.length ) {
+      nUnanswered++;
+    } else if ( strTheirAnswer === "sirius" ) {
+      nRight++;
+    } else {
+      nWrong++;
+    }
+
+    radios = document.getElementsByName( "evening" );
+    for (var i = 0; i < radios.length; i++){
+      if ( radios[i].checked ) {
+        strTheirAnswer = radios[ i ].value;
+        break;
+      }
+    }
+    if ( i >= radios.length ) {
+      nUnanswered++;
+    } else if ( strTheirAnswer === "venus" ) {
+      nRight++;
+    } else {
+      nWrong++;
+    }
+
+    radios = document.getElementsByName( "galaxy" );
+    for (var i = 0; i < radios.length; i++){
+      if ( radios[i].checked ) {
+        strTheirAnswer = radios[ i ].value;
+        break;
+      }
+    }
+    if ( i >= radios.length ) {
+      nUnanswered++;
+    } else if ( strTheirAnswer === "irregular" ) {
+      nRight++;
+    } else {
+      nWrong++;
+    }
+
+    radios = document.getElementsByName( "common" );
+    for (var i = 0; i < radios.length; i++){
+      if ( radios[i].checked ) {
+        strTheirAnswer = radios[ i ].value;
+        break;
+      }
+    }
+    if ( i >= radios.length ) {
+      nUnanswered++;
+    } else if ( strTheirAnswer === "redDwarf" ) {
+      nRight++;
+    } else {
+      nWrong++;
+    }
+
+    radios = document.getElementsByName( "moons" );
+    for (var i = 0; i < radios.length; i++){
+      if ( radios[i].checked ) {
+        strTheirAnswer = radios[ i ].value;
+        break;
+      }
+    }
+    if ( i >= radios.length ) {
+      nUnanswered++;
+    } else if ( strTheirAnswer === "onehundred81" ) {
+      nRight++;
+    } else {
+      nWrong++;
+    }
+
+    // Now we have the stats..  Update the screen already!!
+    $("#correctAnswers").text( "Correct Answers: " + nRight );
+    $("#wrongAnswers").text( "Wrong Answers: " + nWrong );
+    $("#unAnswered").text( "Unanswered: " + nUnanswered );
 }
 
-
-displayStartTestButton();
-//displayStopTestButton();
-//displayTheTest();
-
-$(".btn-start").on("click", function() {
-    // Call the function that displays the stop button..
-    displayTheTest();
-  });
-  
-$(".btn-stop").on("click", function() {
-    // Call the function that displays the stop button..
-    debugger;
-    displayStartTestButton();
-});
 
