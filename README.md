@@ -25,3 +25,8 @@ than the one I turned in.. The change there was to update the images from the po
 page to show images of the Crystal Game and this Trivia Game and also add links to the
 images to open the sites in separate tabs.
 
+And finally..  Here is a link to the deployed version of THIS application:
+
+https://kriley314.github.io/TriviaGame/
+
+Enjoy!
